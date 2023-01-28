@@ -1,112 +1,203 @@
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&display=swap");
 
-html, body, div, span, applet, object, iframe,
-h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-a, abbr, acronym, address, big, cite, code,
-del, dfn, em, img, ins, kbd, q, s, samp,
-small, strike, strong, sub, sup, tt, var,
-b, u, i, center,
-dl, dt, dd, ol, ul, li,
-fieldset, form, label, legend,
-table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, embed, 
-figure, figcaption, footer, header, hgroup, 
-menu, nav, output, ruby, section, summary,
-time, mark, audio, video {
-	margin: 0;
-	padding: 0;
-	border: 0;
-	font-size: 100%;
-	font: inherit;
-	vertical-align: baseline;
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
 }
 /* HTML5 display-role reset for older browsers */
-article, aside, details, figcaption, figure, 
-footer, header, hgroup, menu, nav, section {
-	display: block;
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
 }
 body {
-	line-height: 1;
-  font-family: 'Open Sans', sans-serif;
-	background-color: #fbfcfe;
+  line-height: 1;
+  font-family: "Open Sans", sans-serif;
+  background-color: #e3f2fd;
 }
-ol, ul {
-	list-style: none;
+ol,
+ul {
+  list-style: none;
 }
-blockquote, q {
-	quotes: none;
+blockquote,
+q {
+  quotes: none;
 }
-blockquote:before, blockquote:after,
-q:before, q:after {
-	content: '';
-	content: none;
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none;
 }
 table {
-	border-collapse: collapse;
-	border-spacing: 0;
+  border-collapse: collapse;
+  border-spacing: 0;
 }
 
 /* --------------------------- body ------------------------- */
 .container {
-	width: 100%;
-	margin: auto;
-	text-align: center;
+  display: flex;
+  flex-wrap: wrap;
+  margin: 20px;
+  justify-content: center;
+}
+.container .color {
+  background: #fff;
+  margin: 13px;
+  padding: 7px;
+  list-style: none;
+  border-radius: 6px;
+  text-align: center;
+  box-shadow: 0 10px 20px rgba(52, 87, 220, 0.08);
+  transition: transform 0.3s ease;
+}
+.container .color:active {
+  transform: scale(0.95);
 }
 
-.color-container {
-	display: flex;
-	flex-wrap: wrap; 
-	align-items: center;
-	justify-content: center;
-
+.color .rect-box {
+  width: 185px;
+  height: 188px;
+  background-color: #8a6cff;
+  border-radius: 5px;
+}
+.color:hover .rect-box {
+  filter: brightness(106%);
 }
 
-.color {
-	width: 172px;
-	height: 180px;
-	background: #ffffff;
-	margin: 10px;
-	padding: 10px; 
-	border-radius: 8px;
-	box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 15px -3px, rgba(0, 0, 0, 0.05) 0px 4px 6px -2px;
-}
-.color .img-color {
-	background: #7878ff; 
-	height: 150px;
-	width: 100%;
-}
-
-
-/* --------------------------- Button Css Style ----------------------   */
-
-
-
-.button {
-	margin-top: auto;
-  font-family: "Open Sans", sans-serif;
-  font-size: 16px;
-  letter-spacing: 2px;
-  text-decoration: none;
+.color .hex-value {
+  display: block;
+  margin: 12px 0 8px;
+  color: #444;
+  font-size: 1.15rem;
+  font-weight: 500;
   text-transform: uppercase;
-  color: #000;
+}
+
+.refresh-btn {
+  position: fixed;
+  left: 50%;
+  bottom: 40px;
+  outline: none;
+  color: #fff;
   cursor: pointer;
-  border: 3px solid;
-  padding: 0.25em 0.5em;
-  box-shadow: 1px 1px 0px 0px, 2px 2px 0px 0px, 3px 3px 0px 0px, 4px 4px 0px 0px, 5px 5px 0px 0px;
-  position: relative;
-  user-select: none;
-  -webkit-user-select: none;
-  touch-action: manipulation;
+  border-radius: 5px;
+  font-size: 1.1rem;
+  font-weight: 500;
+  padding: 12px 20px;
+  background: #8a6cff;
+  border: 2px solid #fff;
+  box-shadow: 0 15px 25px rgba(52, 87, 220, 0.2);
+  transform: translateX(-50%);
 }
 
-.button:active {
-  box-shadow: 0px 0px 0px 0px;
-  top: 5px;
-  left: 5px;
-}
-
-@media (min-width: 768px) {
-  .button {
-    padding: 0.25em 0.75em;
+/* ------------------------ responsive --------------------- */
+@media screen and (max-width: 510px) {
+  .container {
+    margin: 10px;
+  }
+  .container .color {
+    margin: 8px;
+    padding: 5px;
+  }
+  .color .rect-box {
+    width: 145px;
+    height: 148px;
+  }
+  .color .hex-value {
+    font-size: 1.05rem;
   }
 }
